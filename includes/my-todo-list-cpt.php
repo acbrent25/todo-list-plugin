@@ -25,7 +25,7 @@ function mtl_register_todo(){
     $args = apply_filters('mtl_todo_args', array(
         'labels'            => $labels,
         'description'       => 'Todos by category',
-        'taxonomies'        => array('categories'),
+        'taxonomies'        => array('category'),
         'public'            => true,
         'show_in_muen'      => true,
         'menu_positions'    => 5,
