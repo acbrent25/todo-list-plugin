@@ -1,3 +1,3 @@
-jQuery(document).ready(function($d){
-    console.log('plugin js loaded');
+jQuery(document).ready(function($){
+    console.log('todo list plugin js loaded');
 });

@@ -14,13 +14,18 @@ if(!defined('ABSPATH')){
 
 // Load Scripts
 require_once(plugin_dir_path(__FILE__) . '/includes/my-todo-list-scripts.php');
- 
-// Load Custom Post Types
-require_once(plugin_dir_path(__FILE__) . '/includes/my-todo-list-cpt.php');
-
-// Load Custum Fields
-require_once(plugin_dir_path(__FILE__) . '/includes/my-todo-list-fields.php');
 
 // Load Shortcodes
 require_once(plugin_dir_path(__FILE__) . '/includes/my-todo-list-shortcodes.php');
+
+// Check if admin
+if(is_admin()){
+    // Load Custom Post Types
+    require_once(plugin_dir_path(__FILE__) . '/includes/my-todo-list-cpt.php');
+
+    // Load Custum Fields
+    require_once(plugin_dir_path(__FILE__) . '/includes/my-todo-list-fields.php');
+}
+ 
+
 

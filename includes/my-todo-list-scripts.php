@@ -1,10 +1,18 @@
 <?php
 
 // Add Scripts
+if(is_admin()){
 
-function PREFIX_add_scripts(){
-    wp_enqueue_style('PREFIX-main-style', plugins_url() . '/wordpress-plugin-boilerplate/css/style.css');
-    wp_enqueue_script('PREFIX-main-script', plugins_url() . '/wordpress-plugin-boilerplate/js/main.js');
+    function mtl_add_admin_scripts(){
+        wp_enqueue_style('mtl-admin-style', plugins_url() . '/my-todo-list/css/style-admin.css');
+    }
+    add_action('admin_init', 'mtl_add_admin_scripts');
 }
 
-add_action('wp_enqueue_scripts', 'PREFIX_add_scripts');
+// add scripts
+function mtl_add_scripts(){
+    wp_enqueue_style('mtl-main-style', plugins_url() . '/my-todo-list/css/style.css');
+    wp_enqueue_script('mtl-main-script', plugins_url() . '/my-todo-list/js/main.js');
+}
+
+add_action('wp_enqueue_scripts', 'mtl_add_scripts');
